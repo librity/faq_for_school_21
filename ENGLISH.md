@@ -32,16 +32,14 @@ For everything else, ask your school's administrative team (ADM, Bocal, etc.)
 - [How do I get a free JetBrains license (Clion, PyCharm, etc.)](#get_jetbrains)
 - [How do I create a resume?](#cv)
 - [42 Project Experience Calculators](#experience_calc)
-- [Useful channels in slack](#slack)
-- [Information about peers](#find-peer)
+- [Useful Slack channels](#slack)
 
 **Technical questions**
 
 - [Coding WIKI](#coding_wiki)
 - [GCC or Clang?](#compiler)
-- [How to check remaining space on school mac?](#mac_memory)
+- [How do I check the remaining space on my school's mac?](#mac_memory)
 - [Error while cloning repository (Permission denied (publickey))](#error_publickey)
-- [I set up norminette according to the official guide, but it still doesn't work.](#vpn_norminett)
 - [Installing Oh-My-Zsh](#zsh)
 - [Install HomeBrew on Mac](#brew)
 - [Likbez on computer memory device and leaks](#memory_manual)
@@ -248,100 +246,58 @@ check with your school's administrative team (ADM, Bocal, etc.)
 
 ## <a name="experience_calc">42 Project Experience Calculators</a>
 
----
-
 - [https://isthisjazz.website/xpcalc.php](https://isthisjazz.website/xpcalc.php)
 - [https://42.tbailleu.dev/](https://42.tbailleu.dev/) - latest
-
-## <a name="slack">Useful channels in slack</a>
-
-- #chess_school21 - chess club.
-- #schoolcoffee - once a week we meet a new person and drink coffee.
-- #mafia - mafia in the Moscow campus.
-- #21hackers - channel with hackathons.
-- #21lectures - studentnts write who they want to invite to the school as a lecturer.
-- #it_news - news from the IT world, meetups, webinars, hackathons.
-- #born_to_code - a channel for questions about projects and code.
-- #lab_moscow - robotics channel in Moscow.
-- #lab_kazan - robotics channel in Kazan.
-- #lab_news - news from the world of electronics and robotics.
-- #coding_cups - programming contests.
-- #help - channel for cleaning help.
-- #kvartira - search for housing.
-- #talks - discussion of pressing issues of the school with the principal.
-- #dir_talks -||-
-- #datascience - Scientist data channel.
-- #web - channel of web developers.
-- #school_life - an overview of events and channels.
-- #java - mostly Java SE.
-
-## <a name="find-peer">Peer Information</a>
-
-- Telegram bot [@peer_location_bot](https://t.me/peer_location_bot)
-- Campus based school coffee [@randomcoffeefrybot](https://t.me/randomcoffeefrybot)
-- Rating of students by level [jcorwin.ru](https://jcorwin.ru/)
 
 ## Technical questions
 
 ## <a name="coding_wiki">Coding WIKI</a>
 
-A very useful notion page that contains a lot of useful educational information (lectures/guides/instructions/reminders).
+A russian-language notion page with lots of useful educational information
+(lectures/guides/instructions/reminders).
 Link - [Coding WIKI](https://www.notion.so/coding_wiki-1d8b8bc675f5426db90a02dd22324ac8)
 
 ## <a name="compiler">GCC or Clang?</a>
 
-Do not forget that Clang is used at our school, not GCC (an alias is made).
-There are strong differences between them (in particular, GCC is stricter with -Werror -Wall -Wextra).
-So, when working on our system, we compile using Clang.
+There are significant differences between the two
+(in particular, GCC is stricter with `-Werror -Wall -Wextra`).
+MacOS environments usually use `clang`,
+while Linux environments usually use `gcc`.
+Check with your school's administrative team (ADM, Bocal, etc.)
 
-## <a name="mac_memory">How do I check the remaining space on my school mac?</a>
+## <a name="mac_memory">How do I check the remaining space on my school's mac?</a>
 
 Learn to use standard terminal commands.
 
-> mandu
-> man df
+```bash
+$ man du
+$ man df
+```
 
 ## <a name="error_publickey">Error while cloning repository (Permission denied (publickey))</a>
 
-Do not forget to follow the steps from [21-school.ru/ssh](http://21-school.ru/ssh):
+### Create a new key and add it to your intra profile
 
-1.ssh_keygen 2. Enter three times 3. cat ~/.ssh/id_rsa.pub 4. Insert the entire contents of the file into the intra using the link [https://profile.intra.42.fr/gitlab_users/new](https://profile.intra.42.fr/gitlab_users/new) 5. School VPN must be enabled.
-
-All the necessary instructions are available at [21-school.ru/adm](https://21-school.ru/adm).
-
-## If the problem persists after all the above actions, then we first turn to the students in the slack or left / right. If they do not help, we write in a glass about the problem.
-
-## <a name="vpn_norminett">I set up norminette according to the official guide, but it still doesn't work.</a>
-
-Check if the school's DNS server settings are recorded.
-DNS - 192.168.50.130
-Domains msk.21-school.ru
-
-For example, on linux, the /etc/resolv.conf file will contain the following lines:
-
-> nameserver 192.168.50.130
-> search msk.21-school.ru
-
-School IP to check:
-IP vogsphere:
-
-> 192.168.50.135
-
-IP norminette:
-
-> 192.168.50.133
+1. Open a terminal and run the command `ssh-keygen -t rsa`
+2. Copy the public key from the file `cat ~/.ssh/id_rsa.pub`
+3. Go to https://profile.intra.42.fr/gitlab_users and delete all old keys
+4. Click on `new ssh key`, paste the public key and click on `Submit`
 
 ## <a name="zsh">Install Oh-My-Zsh</a>
 
 We write to the terminal and run:
 
-> sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```bash
+$ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
 
 ## <a name="brew">Installing HomeBrew on a Mac</a>
 
 We write to the terminal and run:
 
-> curl -fsSL https://rawgit.com/kube/42homebrew/master/install.sh | zsh
+```bash
+$ curl -fsSL https://rawgit.com/kube/42homebrew/master/install.sh | zsh
+```
 
 ## <a name="memory_manual">Learning about computer memory and leaks</a>
 
@@ -356,18 +312,27 @@ We write to the terminal and run:
 
 - Install HomeBrew:
 
-  > curl -fsSL https://rawgit.com/kube/42homebrew/master/install.sh | zsh
+```bash
+$ curl -fsSL https://rawgit.com/kube/42homebrew/master/install.sh | zsh
+```
 
 - Connect the repository:
 
-  > brew tap LouisBrunner/valgrind
+```bash
+$ brew tap LouisBrunner/valgrind
+```
 
 - Install valgrind:
-  > brew install --HEAD LouisBrunner/valgrind/valgrind
+
+```bash
+$ brew install --HEAD LouisBrunner/valgrind/valgrind
+```
 
 Usage:
 
-> valgrind ./[your binary] [args] --leak-check=full
+```bash
+$ valgrind ./[your binary] [args] --leak-check=full
+```
 
 ## <a name="gui_leaks">Checking for leaks in a graphic project (FDF, Fract'ol and others)</a>
 
@@ -376,7 +341,10 @@ First:
 
 1. Run your program
 2. In another terminal, write:
-   > leaks [name of your binary]
+
+```bash
+$ leaks [name of your binary]
+```
 
 Second:
 
@@ -392,41 +360,52 @@ Second:
 If you get a "Failed to gain authorization" error when trying to run the Leaks tool:
 
 1. Create an entitlement file using the com.apple.security.get-task-allow entitlement:
-   > % /usr/libexec/PlistBuddy -c "Add :com.apple.security.get-task-allow bool true" tmp.entitlements<br/>
-   > File Doesn't Exist, Will Create: tmp.entitlements
+
+```bash
+$ % /usr/libexec/PlistBuddy -c "Add :com.apple.security.get-task-allow bool true" tmp.entitlements
+File Doesn't Exist, Will Create: tmp.entitlements
+```
+
 2. Sign your code with these rights:
-   > % codesign -s - --entitlements tmp.entitlements -f /path/to/tool<br/>
-   > xxst: replacing existing signature
+
+```bash
+$ % codesign -s - --entitlements tmp.entitlements -f /path/to/tool
+xxst: replacing existing signature
+```
 
 After that Leaks will run your program successfully.<br/>
 Solution found on the Apple Developer forum (link to <a href="https://developer.apple.com/forums/thread/685964">thread</a>)
 
 ## <a name="cache">Ran out of space on Mac. How to clear the cache? Enter the commands in turn.</a>
 
-> rm -rf ~/Library/Caches/\*
-
-> rm -rf ~/Library/_42_cache_
-
-> rm -rf ~/Library/Application\ Support/Slack/Service\ Worker/CacheStorage/
-
-> rm -rf ~/Library/Application\Support/Slack/Cache/
-
-> rm -rf ~/Library/Application\ Support/Slack/Code\ Cache/
+```bash
+$ rm -rf ~/Library/Caches/\*
+$ rm -rf ~/Library/_42_cache_
+$ rm -rf ~/Library/Application\ Support/Slack/Service\ Worker/CacheStorage/
+$ rm -rf ~/Library/Application\Support/Slack/Cache/
+$ rm -rf ~/Library/Application\ Support/Slack/Code\ Cache/
+```
 
 ## <a name="error_fillit">Why did Moulinette put -42 in fillit for a libft function</a>
 
 This happens because moulinett in the fillit project doesn't properly handle headers that are built like this:
 
-> #include "../libft/libft.h"
+```C
+#include "../libft/libft.h"
+```
 
 It is necessary to fix all headers in the project to:
 
-> #include "libft.h"
+```C
+#include "libft.h"
+```
 
 And also copy the libft.h file itself to the includes folder in the project root.
 And fix the Makefile in the place where the headers are connected to:
 
-> -I includes/
+```bash
+$ -I includes/
+```
 
 On all other projects, there is no difference how to connect headers. This issue has only been seen in fillit.
 
