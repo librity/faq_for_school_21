@@ -21,16 +21,13 @@ For everything else, ask your school's administrative team (ADM, Bocal, etc.)
 - [Grading Accidents](#grading_accidents)
 - [Tig Questions](#tig)
 - [Slack is deleting old messages!](#slack_panic)
-- [How to bring a guest to school](#guest)
-- [What to do if you get sick](#desease)
-- [What to do if something is spilled/dirty](#water)
-- [What to do if your Mac is broken/not working](#brokenmac)
-- [I forgot to log out and now some error pops up when I try to log into my account](#relogin_error)
-- [Required Pedagogical Meetings](#pedmiteengs)
-- [Getting a certificate from the school](#contract)
-- [Message about blackhole](#blackhole)
-- [Where to get things bought with wallets](#wallets)
-- [Questions on code norm](#norm)
+- [How do I bring a guest to school?](#guests)
+- [What do I do if I get sick?](#sick)
+- [Pedagogical and Community Meetings](#meetings)
+- [School Certificate and Degree](#certificate)
+- [Intra's Black Hole](#blackhole)
+- [Buying physical objects with Altarians (₳)](#altarians)
+- [The 42 Norm](#norm)
 - [Exam Questions (C Exam Alone In The Dark - Beginner)](#exam)
 - [How to get a license for JetBrains (Clion, PyCharm, etc.)](#get_jetbrains)
 - [It's time to make a summary. Where to start?](#cv)
@@ -108,98 +105,93 @@ Check with your school's administrative team (ADM, Bocal, etc.)
 ## <a name="slack_panic">Slack is deleting old messages!</a>
 
 We all know that Slack deletes old messages from time to time.
-In order for the history to be preserved, the school needs to pay a very decent
-amount of money to the slack (~$100,000) due to the large number of people.
-Why do we continue to communicate in slack? Because this is the position of the school administration.
-If you want, you can try to lure the community to another messenger,
-but as practice and numerous attempts of new students show, it's useless :D
+In order for all history to be preserved, the school would have to pay an absurd
+amount of money Slack (~$100,000) given the large number of people that use the server.
 
-## <a name="guest">How to bring a guest to school</a>
+Some schools use alternative services like Discord.
+Check with your school's administration and use whatever service they recommend.
 
-Follow the link - [HERE] (https://docs.google.com/forms/d/e/1FAIpQLSfYMfRIse_kM8r4HjnLKA0ZNG8-XFU1TJvjxQeMFVzQK5yGeg/viewform) and register the guest.
-Remember the basic rules - a guest comes for a maximum of an hour, goes everywhere with an escort and wears a badge.
-Guests must register the day before their arrival.
-On weekends, it is not possible to bring a guest, because ADM is present at the school only on weekdays.
+## <a name="guests">How do I bring a guest to school?</a>
 
-## <a name="desease">What to do if you get sick</a>
+Varies from school to school.
+Check with your school's administrative team (ADM, Bocal, etc.)
 
-If you are sick, it is better to stay at home so as not to infect other students. You do not need to bring administration information.
-However, if you miss deadlines and get sick, we write to ADM and ask for a delay in deadlines due to illness, after which we bring them all the information. Naturally, your illness should be more serious than a runny nose.
+## <a name="sick">What do I do if I get sick?</a>
 
-## <a name="water">What to do if something is spilled/dirty</a>
+If you are sick, it's better to stay at home to avoid spreading it to other students.
+You don't need to inform the administration.
+However, if you will miss deadlines due to your sickness,
+check with your school's administration for possible extensions.
+We're talking about serious illnesses here, not just a runny nose.
 
-We write to the channel in slack #help about what happened, or we approach the cleaners and ask them to clean up the mess.
+## <a name="meetings">Pedagogical and Community Meetings</a>
 
-## <a name="brokenmac">What to do if your mac is broken/not working</a>
+Varies from school to school.
+Check with your school's administrative team (ADM, Bocal, etc.)
 
-We write to the channel in slack #boсal about what happened and change to another computer
+## <a name="certificate">School Certificate and Degree</a>
 
-## <a name="relogin_error">I forgot to log out and now some error pops up when I try to log into my account</a>
+Varies from school to school.
+Check with your school's administrative team (ADM, Bocal, etc.)
 
-Everything is very simple. You need to click the "Terminate sessions" button and that's it. However, it is likely that your account settings will be reset and you will have to set them again, so it is best not to forget to log out.
-Sometimes, after all this, the intra starts counting time for you endlessly and incorrectly indicates which computer you are sitting at. The solution is also trivial - we write in #boсal and wait until they fix it.
+## <a name="blackhole">Intra's Black Hole</a>
 
-## <a name="pedmiteengs">Required Pedagogical Meetings</a>
+Schools around the world have different progression mechanisms,
+and not all of them use the Black Hole system.
+Check with your school's administrative team (ADM, Bocal, etc.)
 
-#### What should I do if I can't come (I work/I don't have time)?
+## <a name="altarians">Buying physical objects with Altarians (₳)</a>
 
-Unfortunately, you have to come. In case of non-attendance at the meeting, TIG is issued.
+Varies from school to school.
+Check with your school's administrative team (ADM, Bocal, etc.)
 
-#### I have a good reason for not showing up. To whom to write?
+## <a name="norm">The 42 Norm</a>
 
-We write your reason in #adm and wait for a response.
+#### Where can I find the latest version?
 
-#### How do they check attendance at a meeting?
+The latest version (`3.x.x`) of both the norm and norminette checker
+can be found in the official repo:
 
-At the entrance there is Face ID, which determines by the face who entered the school and what time.
+- https://github.com/42School/norminette
+- https://github.com/42School/norminette/tree/master/pdf
 
-#### ≈999999 people won't fit into the atrium! How can we all fit in there?
+It has English, French, Japanese, Korean, Portuguese and Turkish translations.
 
-You don't have to sit in the atrium. It is enough to be at school and watch the broadcast.
+#### Can I use C Function-Like Macros?
 
-## <a name="contract">Getting help from the school</a>
-
-You need a certificate from the school for the army / university / embassy. Our certificate of study is the contract with the school. If necessary, we scan and show a copy of the contract.
-
-## <a name="blackhole">Message about blackhole</a>
-
-You enter the intro, and you get a "blackhole" error. This means that you missed the French deadline, where you need to get 7 levels in six months. But our school lives by its own deadlines, so there is nothing to worry about. Just click "continue game". But if you can't enter the intranet afterwards and/or click "leave the game", then write in #bocal and ask you to unlock your account.
-
-## <a name="wallets">Where to get things bought with wallets</a>
-
-We come to ADM during business hours and ask for your purchase.
-
-## <a name="norm">Coding norm questions</a>
-
-#### Where can I find up-to-date regulations?
-
-Follow the link - [HERE](https://cdn.intra.42.fr/pdf/pdf/1065/norme.en.pdf).
-You can find the translation of the norm rules into Russian - [HERE] (https://github.com/burninggoose/42-norme-ru). Translation leaves much to be desired, and in general - learn English, it is necessary for a programmer.
-
-#### Can macros be used?
-
-It is forbidden. Norminette and peers won't miss things like:
+Function-like macro are forbidden by the norm:
 
 > #define SUM(x, y) (x + y)
 
 Besides, there is absolutely no need for such things. Just create a separate function.
 
-#### Is it possible to use global or static variables?
+#### Can I use static or global variables?
 
-Static variables are used without restrictions, global ones subject to justification (see Section II.1 of the Rules). Please note that in some projects the use of global variables is expressly prohibited.
-Unreasonable use of a global variable: counters, a variable used in one function. Reasonable use: A reference to a storage structure, such as a character buffer.
+Static variables can be used without restrictions.
+Global variables are allowed, but their use must be justified.
+Some projects flat-out forbid the use of global variables,
+so beware of that.
 
-#### Is it possible to use constants and structures from the limits.h or bool.h libraries?
+```diff
+Global Variables:
+- Unreasonable use: a variable used in a single function.
++ Reasonable use: A pointer to a shared storage structure.
+```
 
-Can. When in doubt, just copy the source code into your project.
+#### Can I use constants from `limits.h` or `bool.h` headers?
 
-#### How to format a comment correctly?
+You are allowed to use constant defines from system headers
+as long as you're not also using forbidden functions.
 
-Comments are not allowed in the function body. C99-style comments - //, are not allowed. (See Section II.11 of the Rules).
+#### How do I comment my code?
+
+Comments aren't allowed inside the function's body.
+C99-style comments (`//`), are not allowed.
 A well-formed comment looks like this:
 
-> /_ > \*\* Comment text.
-> _/
+> /_  
+>  \*\* YOUR COMMENT HERE.  
+>  _/
 
 ## <a name="exam">Exam Questions (C Exam Alone In The Dark - Beginner)</a>
 
