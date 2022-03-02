@@ -28,10 +28,10 @@ For everything else, ask your school's administrative team (ADM, Bocal, etc.)
 - [Intra's Black Hole](#blackhole)
 - [Buying physical objects with Altarians (₳)](#altarians)
 - [The 42 Norm](#norm)
-- [Exam Questions (C Exam Alone In The Dark - Beginner)](#exam)
-- [How to get a license for JetBrains (Clion, PyCharm, etc.)](#get_jetbrains)
-- [It's time to make a summary. Where to start?](#cv)
-- [Sites with level counter for projects](#top_21)
+- [Exam Questions](#exam)
+- [How do I get a free JetBrains license (Clion, PyCharm, etc.)](#get_jetbrains)
+- [How do I create a resume?](#cv)
+- [42 Project Experience Calculators](#experience_calc)
 - [Useful channels in slack](#slack)
 - [Information about peers](#find-peer)
 
@@ -49,7 +49,7 @@ For everything else, ask your school's administrative team (ADM, Bocal, etc.)
 - [Check for leaks in a graphic project (FDF, Fract'ol and others)](#gui_leaks)
 - [Leaks: error "Failed to gain authorization"](#leaks_auth_error)
 - [Ran out of space on the poppy. How to clear the cache?](#cache)
-- [Why did moulinette set -42 in fillit for a function from libft](#error_fillit)
+- [Why did Moulinette set -42 in fillit for a function from libft](#error_fillit)
 - [Configuring debugger in vscode](#vscode)
 - [Setting clion](#clion)
 - [Configuring Xcode to work with School 21 projects](https://dimaru.github.io/guides-21/Xcode_setup.html)
@@ -149,7 +149,7 @@ Check with your school's administrative team (ADM, Bocal, etc.)
 
 #### Where can I find the latest version?
 
-The latest version (`3.x.x`) of both the norm and norminette checker
+The latest version (`3.x.x`) of both The Norm and norminette checker
 can be found in the official repo:
 
 - https://github.com/42School/norminette
@@ -159,11 +159,29 @@ It has English, French, Japanese, Korean, Portuguese and Turkish translations.
 
 #### Can I use C Function-Like Macros?
 
-Function-like macro are forbidden by the norm:
+Function-like macro are forbidden by The Norm:
 
-> #define SUM(x, y) (x + y)
+```C
+# define SUM(x, y) (x + y)
+```
 
-Besides, there is absolutely no need for such things. Just create a separate function.
+The first thing to understand about Macros is that
+(like most things in IT) they are tools, not solutions.
+Macros are meta-programming mechanism that let
+developers extend the functionality of a programming language.
+For example: `stdarg.h`'s `va_start`, `va_arg` and `va_end`
+are all macros that extend C's syntax to support variable arguments with `...`.
+
+In theory you can use macros for almost everything,
+but that would be like opening a can by beating it with a hammer.
+The above `SUM` example just substitutes `SUM(x, y)` with `x + y` before compilation.
+It doesn't check the types of the arguments,
+or whether the `x + y` substitution will be meaningful.
+This makes for very unsafe code that is hard to debug.
+
+That's why The Norm prohibits this mechanism:
+None of our projects require us to extend C's syntax,
+and it's always better to declare a function with strong types.
 
 #### Can I use static or global variables?
 
@@ -189,55 +207,51 @@ Comments aren't allowed inside the function's body.
 C99-style comments (`//`), are not allowed.
 A well-formed comment looks like this:
 
-> /_  
->  \*\* YOUR COMMENT HERE.  
->  _/
+```C
+/*
+** YOUR COMMENT HERE.
+*/
+```
 
-## <a name="exam">Exam Questions (C Exam Alone In The Dark - Beginner)</a>
+## <a name="exam">Exam Questions</a>
 
-#### What time and what time are the exams?
+#### When and where are the exams?
 
-Thursdays at 12:00. If by next Saturday there are volunteers who are ready to look after the examinees, then it will be this Saturday at 12:00.
+Varies from school to school.
+Check with your school's administrative team (ADM, Bocal, etc.)
 
 #### How to log in to the exam correctly?
 
-- We come and log in using the exam account - exam:exam.
-- Next, go to the terminal and write kinit [your login] and enter your password.
-- We are waiting for the command from the examiners about the beginning of the exam and then write examshell in the terminal.
-- The exam has begun!
+Varies from school to school.
+Check with your school's administrative team (ADM, Bocal, etc.)
 
-#### Do I need to bring to the norm in the exam?
+#### I did everything right, tested it, and Moulinette gave me a 0!!!
 
-No. This is not required for the exam.
+Carefully read the traceback from Moulinette, especially the `diff` command results.
+It's likely that you forgot to compile with the `-Wall -Werror -Wextra` flags and missed a hidden error.
+That being said, Moulinette is a computer program, and it can make mistakes.
+If you're sure this is your case,
+check with your school's administrative team (ADM, Bocal, etc.)
 
-#### I did everything right, tested it, and moulinette returned 0!!!
-
-So something is wrong. Carefully read the traceback from moulinette (knowledge of the diff command will help a lot). It is also likely that you forgot to compile with the -Wall -Werror -Wextra flags and did not see the hidden error. However, moulinette is a software package, and it can also have errors. If you think that this is your case, you can try to dispute it in ADM.
-
-#### On the exam I did everything up to level 3. What level can I start next time?
-
-In fact, if you made levels 00-03 inclusive, then left, then upon arrival you can start from any level to which you have reached and the maximum points will be offered, and not how many you have scored. That is, if you made levels 00-03, for example, by 16-11-16-16 points, then you left the next time you can start from level 00-04, and for 04 you will immediately be prompted for 80 (16-16-16 -16-16).
-Plus there is an exception with level 5, if you did 04 without an error and left, then next time you can start from 05 already for 100 points, but if you did 04 with an error, then you will not be able to start from 05 next time if left, and again from 04 for 80 points
-
-## <a name="get_jetbrains">How to get a JetBrains (Clion, PyCharm, etc.) license</a>
+## <a name="get_jetbrains">How do I get a free JetBrains license (Clion, PyCharm, etc.)</a>
 
 1. Go to the [JetBrains](https://account.jetbrains.com/login) website and create an account.
-2. Next, follow the link [Apply for a free student or teacher license for educational purposes]
+2. Click the link [Apply for a free student or teacher license for educational purposes]
 3. Click "Apply now".
-4. Enter correctly all your data in the form. Email must indicate your school - [your nickname]@student.21-school.ru.
-5. Wait for confirmation by mail.
+4. Fill the form correctly. Use your intra's email address: [your nickname]@student.21-school.ru.
+5. Wait for the email confirmation.
 
-## <a name="cv">It's time for a resume. Where to start?</a>
+## <a name="cv">How do I create a resume?</a>
 
-- Read [recommendations for writing a resume](docs/Rekomendatsii_po_napisaniyu_rezyume_Scheglova_L.docx)
+- Read [recommendations on writing a resume](docs/en_recommendations_on_writing_a_resume_of_shcheglov_l.docx).
 - Go to [canva.com](https://www.canva.com/) and start creating your resume :)
 
-<a name="top_21">Sites with a level counter for projects</a>
+## <a name="experience_calc">42 Project Experience Calculators</a>
 
 ---
 
 - [https://isthisjazz.website/xpcalc.php](https://isthisjazz.website/xpcalc.php)
-- [https://42.tbailleu.dev/](https://42.tbailleu.dev/) - current
+- [https://42.tbailleu.dev/](https://42.tbailleu.dev/) - latest
 
 ## <a name="slack">Useful channels in slack</a>
 
@@ -399,7 +413,7 @@ Solution found on the Apple Developer forum (link to <a href="https://developer.
 
 > rm -rf ~/Library/Application\ Support/Slack/Code\ Cache/
 
-## <a name="error_fillit">Why did moulinette put -42 in fillit for a libft function</a>
+## <a name="error_fillit">Why did Moulinette put -42 in fillit for a libft function</a>
 
 This happens because moulinett in the fillit project doesn't properly handle headers that are built like this:
 
